@@ -10,12 +10,15 @@ if (contactForm) {
 }
 
 // Reservation form
-const reservationForm = document.querySelector("#reservation form");
+const reservationForm = document.getElementById("reservationForm");
 if (reservationForm) {
-    reservationForm.addEventListener("submit", function () {
+    reservationForm.addEventListener("submit", function (e) {
+        e.preventDefault();
         alert("Merci ! Votre réservation a bien été envoyée.");
+        reservationForm.reset();
     });
 }
+
 
 // Page transition
 document.querySelectorAll("a").forEach(link => {
@@ -31,3 +34,4 @@ document.querySelectorAll("a").forEach(link => {
         });
     }
 });
+
