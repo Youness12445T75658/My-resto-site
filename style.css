@@ -484,4 +484,14 @@ button {
   }
 }
 
+.logo-mobile {
+  display: none;
+}
+
+.logo-desktop {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+
 
