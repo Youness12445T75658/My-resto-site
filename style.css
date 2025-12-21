@@ -493,5 +493,45 @@ button {
   font-size: 1.8rem;
 }
 
+@media (max-width: 768px) {
+
+  /* Navbar mobile */
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Cache le logo texte */
+  .logo-desktop {
+    display: none;
+  }
+
+  /* Affiche le logo image */
+  .logo-mobile {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  /* Conteneur logo à DROITE */
+  .logo-container {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Bouton menu à GAUCHE */
+  .mobile-menu-btn {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+}
+
 
 
