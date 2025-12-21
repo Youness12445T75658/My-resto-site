@@ -8,31 +8,37 @@
 </head>
 <body>
 
+  <!-- Transition -->
   <div id="page-transition"></div>
 
-<header>
-  <nav class="navbar">
-    <h1 class="logo">Bella Zanouba</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="infos.html">Infos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="reserv.html">Réserver</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Bella Zanouba</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="infos.html">Infos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reserv.html">Réserver</a></li>
+      </ul>
+    </nav>
+  </header>
 
-
-
-  <section class="section light" id="reservation">
+  <!-- Section réservation -->
+  <section class="section light">
     <h2>Réserver une table</h2>
+
     <p style="text-align:center; max-width:700px; margin: 0 auto 2rem;">
-      Réserve en quelques secondes. Nous confirmons rapidement par email.
+      Réservez en quelques secondes. Nous vous confirmons rapidement par email.
     </p>
 
-    <!-- ✅ Version "démo" : affiche un message (ne peut pas envoyer d'email depuis GitHub Pages) -->
-    <form id="reservationForm">
+    <!-- ✅ FORMULAIRE FORMSPREE (OBLIGATOIRE) -->
+    <form
+      action="https://formspree.io/f/xrezqjzw"
+      method="POST"
+      id="reservationForm"
+    >
       <input type="text" name="name" placeholder="Nom" required />
       <input type="email" name="email" placeholder="Email" required />
 
@@ -41,19 +47,29 @@
         <input type="time" name="time" required />
       </div>
 
-      <input type="number" name="guests" placeholder="Nombre de personnes" min="1" required />
-      <textarea name="message" placeholder="Message (optionnel)"></textarea>
+      <input
+        type="number"
+        name="guests"
+        placeholder="Nombre de personnes"
+        min="1"
+        required
+      />
 
-      <button type="submit">Envoyer la demande</button>
+      <textarea
+        name="message"
+        placeholder="Message (optionnel)"
+      ></textarea>
+
+      <button type="submit">Réserver</button>
     </form>
 
-    <p id="reservationMessage" style="text-align:center; margin-top: 1rem;"></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Bella Zanouba — Tous droits réservés</p>
   </footer>
 
-  <script src="script.js"></script> 
+  <script src="script.js"></script>
 </body>
 </html>
