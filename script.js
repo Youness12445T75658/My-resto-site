@@ -6,3 +6,9 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     this.reset();
 });
+const reservationForm = document.querySelector("#reservation form");
+
+reservationForm.addEventListener("submit", function () {
+    alert("Merci ! Votre réservation a bien été envoyée.");
+});
+
