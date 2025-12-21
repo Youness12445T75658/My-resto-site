@@ -22,16 +22,24 @@ if (reservationForm) {
 
 // Page transition
 document.querySelectorAll("a").forEach(link => {
-    if (link.href && link.target !== "_blank") {
-        link.addEventListener("click", e => {
-            e.preventDefault();
-            const transition = document.getElementById("page-transition");
-            transition.classList.add("active");
+  const href = link.getAttribute("href");
 
-            setTimeout(() => {
-                window.location.href = link.href;
-            }, 600);
-        });
+  // Ignore ancres internes et liens vides
+  if (!href || href.startsWith("#") || link.target === "_blank") {
+    return;
+  }
+
+  link.addEventListener("click", e => {
+    e.preventDefault();
+
+    const transition = document.getElementById("page-transition");
+    if (transition) {
+      transition.classList.add("active");
     }
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 600);
+  });
 });
 
