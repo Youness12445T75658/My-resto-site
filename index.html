@@ -88,3 +88,18 @@
 <script src="script.js"></script>
 </body>
 </html>
+<section id="reservation" class="section light">
+    <h2>Réserver une table</h2>
+
+    <form action="https://formspree.io/f/xxxxabcd" method="POST">
+        <input type="text" name="name" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <input type="number" name="guests" placeholder="Nombre de personnes" min="1" required>
+        <textarea name="message" placeholder="Message (optionnel)"></textarea>
+
+        <button type="submit">Réserver</button>
+    </form>
+</section>
+
