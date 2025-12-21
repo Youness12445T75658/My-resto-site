@@ -19,15 +19,21 @@ if (contactForm) {
     });
 }
 
-// Reservation form
-const reservationForm = document.getElementById("reservationForm");
-if (reservationForm) {
-    reservationForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("Merci ! Votre réservation a bien été envoyée.");
-        reservationForm.reset();
-    });
-}
+<form
+  action="https://formspree.io/f/xrezqjzw"
+  method="POST"
+  id="reservationForm"
+>
+  <input type="text" name="name" placeholder="Nom" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="date" name="date" required>
+  <input type="time" name="time" required>
+  <input type="number" name="guests" min="1" required>
+  <textarea name="message" placeholder="Message (optionnel)"></textarea>
+
+  <button type="submit">Réserver</button>
+</form>
+
 
 
 // Page transition
@@ -52,5 +58,6 @@ document.querySelectorAll("a").forEach(link => {
     }, 600);
   });
 });
+
 
 
