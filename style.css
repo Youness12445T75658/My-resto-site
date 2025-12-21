@@ -236,6 +236,24 @@ footer {
     flex-direction: column;
   }
 }
+.menu-title {
+  margin: 4rem 0 2rem;
+  font-size: 1.8rem;
+  color: #c59d5f;
+  text-align: center;
+}
+
+.menu-card h4 {
+  padding: 1rem 1rem 0;
+  font-size: 1.1rem;
+}
+
+.menu-card p {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
 
 
 
