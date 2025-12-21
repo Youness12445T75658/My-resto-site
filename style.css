@@ -442,3 +442,46 @@ button {
   }
 }
 
+
+/* ===== LOGO MOBILE / DESKTOP ===== */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Logo image : caché par défaut (desktop) */
+.logo-mobile {
+  display: none;
+  height: 36px;
+  width: auto;
+}
+
+/* Logo texte desktop */
+.logo-desktop {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* ===== VERSION MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Affiche le logo image */
+  .logo-mobile {
+    display: block;
+  }
+
+  /* Cache le texte */
+  .logo-desktop {
+    display: none;
+  }
+
+  /* Aligne le header */
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+
