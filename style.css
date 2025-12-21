@@ -406,3 +406,39 @@ button {
     gap: 1.2rem;
   }
 }
+
+
+/* ===== LOGO RESPONSIVE ===== */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Desktop : texte visible */
+.logo-desktop {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Mobile : image cachée par défaut */
+.logo-mobile {
+  display: none;
+  height: 42px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Cache le texte */
+  .logo-desktop {
+    display: none;
+  }
+
+  /* Affiche le logo image */
+  .logo-mobile {
+    display: block;
+  }
+}
+
