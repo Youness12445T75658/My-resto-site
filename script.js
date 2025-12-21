@@ -1,3 +1,13 @@
+// Corrige le bug du retour arrière (bfcache)
+window.addEventListener("pageshow", () => {
+  document.body.classList.add("loaded");
+
+  const transition = document.getElementById("page-transition");
+  if (transition) {
+    transition.classList.remove("active");
+  }
+});
+
 // Contact form
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
@@ -42,4 +52,5 @@ document.querySelectorAll("a").forEach(link => {
     }, 600);
   });
 });
+
 
