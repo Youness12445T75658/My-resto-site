@@ -221,5 +221,15 @@ footer {
         transform: translateY(0);
     }
 }
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
 
 
