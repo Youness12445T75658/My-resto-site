@@ -42,6 +42,16 @@ document.querySelectorAll("a").forEach(link => {
   });
 });
 
+// Menu mobile
+const mobileBtn = document.querySelector(".mobile-menu-btn");
+const navbar = document.querySelector(".navbar");
+
+if (mobileBtn && navbar) {
+  mobileBtn.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+}
+
 
 
 
