@@ -352,3 +352,57 @@ footer {
 button {
   min-height: 44px;
 }
+
+/* ===== MENU MOBILE ===== */
+
+/* Bouton caché par défaut (desktop) */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* Mobile uniquement */
+@media (max-width: 768px) {
+
+  /* Bouton circulaire */
+  .mobile-menu-btn {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #c59d5f;
+    color: white;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Navbar cachée par défaut */
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    z-index: 10000;
+  }
+
+  /* Navbar visible quand active */
+  .navbar.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}
