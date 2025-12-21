@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Réservation – Bella Zanouba</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Transition -->
   <div id="page-transition"></div>
 
-  <!-- Navbar -->
   <header>
     <nav class="navbar">
       <h1 class="logo">Bella Zanouba</h1>
@@ -20,52 +19,61 @@
         <li><a href="menu.html">Menu</a></li>
         <li><a href="infos.html">Infos</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="reserv.html">Réserver</a></li>
+        <li><a href="reservation.html">Réserver</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Section réservation -->
   <section class="section light">
     <h2>Réserver une table</h2>
-
     <p style="text-align:center; max-width:700px; margin: 0 auto 2rem;">
-      Réservez en quelques secondes. Nous vous confirmons rapidement par email.
+      Réservations possibles de <strong>10h00 à 23h30</strong>.<br>
+      Créneaux disponibles toutes les <strong>45 minutes</strong>.
     </p>
 
-    <!-- ✅ FORMULAIRE FORMSPREE (OBLIGATOIRE) -->
     <form
       action="https://formspree.io/f/xrezqjzw"
       method="POST"
-      id="reservationForm"
     >
-      <input type="text" name="name" placeholder="Nom" required />
-      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="name" placeholder="Nom" required>
+      <input type="email" name="email" placeholder="Email" required>
 
       <div class="form-row">
-        <input type="date" name="date" required />
-        <input type="time" name="time" required />
+        <input type="date" name="date" required>
+
+        <!-- HEURES CONTRÔLÉES -->
+        <select name="time" required>
+          <option value="">Heure</option>
+          <option>10:00</option>
+          <option>10:45</option>
+          <option>11:30</option>
+          <option>12:15</option>
+          <option>13:00</option>
+          <option>13:45</option>
+          <option>14:30</option>
+          <option>15:15</option>
+          <option>16:00</option>
+          <option>16:45</option>
+          <option>17:30</option>
+          <option>18:15</option>
+          <option>19:00</option>
+          <option>19:45</option>
+          <option>20:30</option>
+          <option>21:15</option>
+          <option>22:00</option>
+          <option>22:45</option>
+          <option>23:30</option>
+        </select>
       </div>
 
-      <input
-        type="number"
-        name="guests"
-        placeholder="Nombre de personnes"
-        min="1"
-        required
-      />
+      <input type="number" name="guests" min="1" placeholder="Nombre de personnes" required>
 
-      <textarea
-        name="message"
-        placeholder="Message (optionnel)"
-      ></textarea>
+      <textarea name="message" placeholder="Message (optionnel)"></textarea>
 
-      <button type="submit">Réserver</button>
+      <button type="submit">Envoyer la réservation</button>
     </form>
-
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Bella Zanouba — Tous droits réservés</p>
   </footer>
