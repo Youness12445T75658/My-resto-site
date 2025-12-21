@@ -533,5 +533,34 @@ button {
   }
 }
 
+/* Logo mobile */
+.logo-mobile {
+  display: none;
+  height: 40px;
+}
+
+/* Desktop : texte visible */
+.logo-desktop {
+  display: block;
+}
+
+/* Mobile uniquement */
+@media (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 👉 à droite */
+    width: 100%;
+  }
+}
+
 
 
