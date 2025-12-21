@@ -335,3 +335,20 @@ footer {
     font-size: 1.8rem;
   }
 }
+
+@media (max-width: 768px) {
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.btn,
+button {
+  min-height: 44px;
+}
