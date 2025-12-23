@@ -1,22 +1,11 @@
 // Corrige le bug du retour arrière (bfcache)
-window.addEventListener("pageshow", () => {
-  document.body.classList.add("loaded");
-
-  const transition = document.getElementById("page-transition");
-  if (transition) {
-    transition.classList.remove("active");
-  }
-});
-
-// Contact form
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        document.getElementById("formMessage").textContent =
-            "Merci pour votre message ! Nous vous répondrons rapidement.";
-        this.reset();
-    });
+if (typeof contactForm !== "undefined") {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("formMessage").textContent =
+      "Merci pour votre message ! Nous vous répondrons rapidement.";
+    this.reset();
+  });
 }
 
 // Page transition
@@ -48,10 +37,6 @@ const navbar = document.querySelector(".navbar");
 
 if (mobileBtn && navbar) {
   mobileBtn.addEventListener("click", () => {
-    navbar.classList.toggle("active");
+    navbar.classList.toggle("open"); // ✅ cohérent avec le CSS
   });
 }
-
-
-
-
