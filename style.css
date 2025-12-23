@@ -574,10 +574,11 @@ button {
   top: 0;
   right: 0;
 
-  width: 50px;      /* taille discrète */
+  /* width: 50px;      /* taille discrète */
   height: auto;
 
   opacity: 0.9;     /* léger, pas agressif */
 }
 /* width: 40px; */  /* plus discret */
   width: 60px;   /* plus visible */
+
