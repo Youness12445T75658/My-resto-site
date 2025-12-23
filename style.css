@@ -598,4 +598,20 @@ button {
   }
 }
 
+.logo {
+  height: 32px;      /* ≈ hauteur du texte "Bella Zanouba" */
+  width: auto;       /* s’étire en longueur naturellement */
+  display: block;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 28px;
+  }
+}
+
+
 
