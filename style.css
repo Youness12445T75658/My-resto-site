@@ -599,7 +599,7 @@ button {
 }
 
 .logo {
-  height: 32px;      /* ≈ hauteur du texte "Bella Zanouba" */
+  height: 36px;      /* ≈ hauteur du texte "Bella Zanouba" */
   width: auto;       /* s’étire en longueur naturellement */
   display: block;
 }
@@ -612,6 +612,7 @@ button {
     height: 28px;
   }
 }
+
 
 
 
