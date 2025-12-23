@@ -599,7 +599,7 @@ button {
 }
 
 .logo {
-  height: 36px;      /* ≈ hauteur du texte "Bella Zanouba" */
+  height: 32px;      /* ≈ hauteur du texte "Bella Zanouba" */
   width: auto;       /* s’étire en longueur naturellement */
   display: block;
 }
@@ -610,6 +610,80 @@ button {
 @media (max-width: 768px) {
   .logo {
     height: 28px;
+  }
+}
+
+
+
+
+.header {
+  height: 64px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: #111;
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Bouton visible */
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Logo reste à droite */
+  .logo-container {
+    margin-left: auto;
+  }
+
+  /* On cache la nav dans la barre */
+  .navbar {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+  }
+
+  /* Menu ouvert */
+  .navbar.open {
+    display: flex;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    margin: auto;
+    gap: 24px;
+    font-size: 22px;
   }
 }
 
